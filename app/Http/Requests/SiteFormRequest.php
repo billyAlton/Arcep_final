@@ -24,30 +24,28 @@ class SiteFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'=>['required'],	
-            'localite_id'=>['required'],
             'id_site'=>['required'],
             'nomdesite'=>['required'],
             'longitude'=>['required'],
-            'latitude'=>['required'],/* 
-            'departement'=>['required'],
-            'commune'=>['required'],
-            'arrondissement'=>['required'], */
-            'quartier'=>['required'],
+            'latitude'=>['required'],
             'camouflage'=>['required'],
             'description'=>['required'],
             'dossier'=>['required'],
             'date_soumission'=>['required'],
-            'date_autorisation'=>['required'],
-            'proprietaire'=>['required'],
+            'date_autorisation'=>['nullable'],
+            'proprietaire'=>['nullable'],
+            'autre_proprietaire'=>['nullable'],
             'emplacement'=>['required'],
             'type'=>['required'],
-            'statut'=>['required'],
-            'ref_courrier'=>['required'],
-            'observation'=>['required'],
-            'valide'=>['required'],
+            'statut'=>['nullable'],
+            'ref_courrier'=>['nullable'],
+            'observation'=>['nullable'],
+            'sensible'=>['required'],
             'conforme'=>['required'],
-            'image'=>['required']
+            'autre_site'=>['required'],
+            'dossier_camouflage'=>['required'],
+            'image'=>['image'],
+            'localite'=>['required']
         ];
     }
 }

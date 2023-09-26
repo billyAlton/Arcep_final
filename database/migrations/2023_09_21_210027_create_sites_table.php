@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('sites', function (Blueprint $table) {
             $table->id();
-            $table->integer('localite_id')->index();
             $table->string('id_site');
             $table->string('nomdesite');
             $table->decimal('longitude');
@@ -26,17 +25,21 @@ return new class extends Migration
             $table->string('quartier');
             $table->string('camouflage');
             $table->text('description');
-            $table->string('dossier');
+            $table->string('numdossier');
             $table->date('date_soumission');
             $table->date('date_autorisation')->nullable();
-            $table->string('proprietaire');
+            $table->string('proprietaire')->nullable();
+            $table->string('autre_proprietaire')->nullable();
             $table->string('emplacement');
             $table->string('type');
             $table->string('statut');
             $table->string('ref_courrier')->nullable();
             $table->string('observation')->nullable();
-            $table->string('valide');
+            /* $table->string('valide'); */
+            $table->string('sensible');
             $table->string('conforme');
+            $table->string('autre_site');
+            $table->string('dossier_camouflage');
             $table->mediumText('image');
             $table->softDeletes();
             $table->timestamps();

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LocaliteController1;
+use App\Http\Controllers\LocaliteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
@@ -32,5 +34,10 @@ Route::middleware('auth')->group(function () {
 Route::prefix('')->name('')->group(function () {
     Route::resource('site', SiteController::class);
 });
+
+Route::get('/site/download{site}', [SiteController::class, 'download'])->name('localite');
+
+Route::get('/localite/create', [LocaliteController::class, 'create'])->name('localite');
+Route::post('localite/import', [LocaliteController::class, 'import'])->name('localite.import');
 
 require __DIR__ . '/auth.php';

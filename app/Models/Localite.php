@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Localite extends Model
 {
     use HasFactory;
+    public function site()
+    {
+        return $this->hasMany(Site::class);
+    }
 }
