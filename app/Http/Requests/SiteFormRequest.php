@@ -43,8 +43,8 @@ class SiteFormRequest extends FormRequest
             'sensible'=>['required'],
             'conforme'=>['required'],
             'autre_site'=>['required'],
-            'dossier_camouflage'=>['required'],
-            'image'=>['image'],
+            'dossier_camouflage'=>['nullable'],
+            'image'=>['image','nullable'],
             'localite'=>['required']
         ];
     }

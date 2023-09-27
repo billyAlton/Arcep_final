@@ -35,23 +35,23 @@
                     <td>Nom de site</td>
                     <td>ID du site</td>
                     <td>Proprietaire</td>
-                    <td>N° de dossier</td>
-                    <td>Reference de dossier</td>
+                    <td>N° de dossier</td>{{-- 
+                    <td>Reference de dossier</td> --}}
                     <td>Longitude</td>
                     <td>Latitude</td>
                     <td>Validé</td>
                     <td>Conformité</td>
                 </thead>
                 <tbody style="text-align:center ">
-                    <td>{{$Element->NomDeSite}}</td>
-                    <td>{{$Element->ID_Site}}</td>
+                    <td>{{$Element->nomdesite}}</td>
+                    <td>{{$Element->id_site}}</td>
                     <td>{{$Element->proprietaire}}</td>
-                    <td>{{$Element->dossier}}</td>
-                    <td>{{$Element->ref_courrier}}</td>
+                    <td>{{$Element->numdossier}}</td>{{-- 
+                    <td>{{$Element->ref_courrier}}</td> --}}
                     <td>{{$Element->longitude}}</td>
                     <td>{{$Element->latitude}}</td>
-                    <td>{{$Element->Valide}}</td>
-                    <td>{{$Element->Conforme}}</td>
+                    <td>{{$Element->statut}}</td>
+                    <td>{{$Element->conforme}}</td>
                 </tbody>
            </table>
            <br>

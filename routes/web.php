@@ -35,7 +35,7 @@ Route::prefix('')->name('')->group(function () {
     Route::resource('site', SiteController::class);
 });
 
-Route::get('/site/download{site}', [SiteController::class, 'download'])->name('localite');
+Route::get('/site/download/{site}', [SiteController::class, 'download'])->name('pdf');
 
 Route::get('/localite/create', [LocaliteController::class, 'create'])->name('localite');
 Route::post('localite/import', [LocaliteController::class, 'import'])->name('localite.import');

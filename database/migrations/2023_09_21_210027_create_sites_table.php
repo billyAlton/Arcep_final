@@ -39,7 +39,7 @@ return new class extends Migration
             $table->string('sensible');
             $table->string('conforme');
             $table->string('autre_site');
-            $table->string('dossier_camouflage');
+            $table->string('dossier_camouflage')->nullable();
             $table->mediumText('image');
             $table->softDeletes();
             $table->timestamps();
